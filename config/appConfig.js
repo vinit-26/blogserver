@@ -4,7 +4,7 @@ appConfig.port = 3330;
 appConfig.allowedCorsOrigin = "*";
 appConfig.env = "env";
 appConfig.db = {
-    uri:"mongodb://127.0.0.1:27017/userAppDB",
+    uri:"mongodb://127.0.0.1:27017/blogAppDB",
 }
 appConfig.apiVersion = "/api/v1";
 
