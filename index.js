@@ -9,8 +9,8 @@ const globalErrorMiddleware = require('./middlewares/appErrorHandler')
 const routeLoggerMiddleware = require('./middlewares/routeLogger')
 const app = express();
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(globalErrorMiddleware.globalErrorHandler)
 app.use(routeLoggerMiddleware.logIp)
@@ -36,7 +36,7 @@ mongoose.set('useCreateIndex',true);
 app.listen(appConfig.port,()=>{
     console.log('App listening on port 3330!');
     let db = mongoose.connect(appConfig.db.uri,{useNewUrlParser: true, useUnifiedTopology: true})
-})
+});
 
 mongoose.connection.on('error',function(error){
     console.log('DataBase Connection Error')
