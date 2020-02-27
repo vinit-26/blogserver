@@ -34,7 +34,7 @@ app.use(globalErrorMiddleware.globalNotFoundHandler)
 
 mongoose.set('useCreateIndex',true);
 app.listen(appConfig.port,()=>{
-    console.log('App listening on port 3330!');
+    console.log('App listening on port: ', appConfig.port);
     let db = mongoose.connect(appConfig.db.uri,{useNewUrlParser: true, useUnifiedTopology: true})
 });
 
